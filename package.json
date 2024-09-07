@@ -14,10 +14,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "llm-code-tracker.helloWorld",
-        "title": "Hello World"
-      },
-      {
         "command": "llm-tracker.toggleLLMCode",
         "title": "Toggle LLM-Generated Code"
       },
@@ -27,12 +23,21 @@
       }
     ],
     "keybindings": [
-    {
-      "command": "llm-tracker.toggleLLMCode",
-      "key": "ctrl+alt+l",
-      "mac": "cmd+alt+l"
+      {
+        "command": "llm-tracker.toggleLLMCode",
+        "key": "ctrl+alt+l",
+        "mac": "cmd+alt+l"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "llm-tracker.statisticsView",
+          "name": "LLM Code Usage Statistics"
+        }
+      ]
     }
-  ]
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
